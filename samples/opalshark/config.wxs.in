@@ -1,0 +1,33 @@
+<Include>
+    <?define ProductName = "OpalShark" ?>
+    <?define ProductDescription = "Media Player for RTP in PCAP files" ?>
+    <?define ProductBaseFilename = "OpalShark" ?>
+    <?define ProductVersion = "1.1.0" ?>
+    <?define ProductManufacturer = "Vox Lucida Pty. Ltd." ?>
+    <?define ProductGUID = "48bff92f-98f9-45fb-a233-db3e2c496d4a" ?>
+
+    <?if $(var.Architecture) = "x86" ?>
+        <?define SSLDir = "$(env.ProgramW6432)\OpenSSL-Win32\bin" ?>
+        <?define FFMPEGDir = "..\..\..\external\ffmpeg-win32-dev\bin" ?>
+        <?define OpenH264Dir = "$(env.ProgramFiles)\PTLib Plug Ins" ?>
+        <?define SpanDspDir = "..\..\..\external\spandsp-0.0.6\src\Release" ?>
+    <?else?>
+        <?define SSLDir = "$(env.ProgramW6432)\OpenSSL-Win64\bin" ?>
+        <?define FFMPEGDir = "..\..\..\external\ffmpeg-win64-dev\bin" ?>
+        <?define OpenH264Dir = "$(env.ProgramW6432)\PTLib Plug Ins" ?>
+        <?define SpanDspDir = "..\..\..\external\spandsp-0.0.6\src\x64\Release" ?>
+    <?endif?>
+
+    <?define AVFORMATVer = "57" ?>
+    <?define AVCODECVer = "57" ?>
+    <?define AVUTILVer = "55" ?>
+    <?define SWRESAMPLEVer = "2" ?>
+    <?define SWSCALEVer = "4" ?>
+
+    <?define WxDir = "$(env.WXDIR)" ?>
+    <?define WxVer = "$(env.WXVER)1" ?>
+    <?define WxCustom = "yes" ?>
+
+    <?define PTLibDir = "..\..\..\ptlib" ?>
+    <?define OPALDir = "..\.." ?>
+</Include>
